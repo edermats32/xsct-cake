@@ -22,13 +22,13 @@ Preferably somewhere thats in your `$PATH`.
 The `xsct-cake` parameters do not start with a `-` in order to distinguish them from the `xsct` ones. \
 Only one parameter can be used at a time (only the first parameter is read).
 
-| Command                              | Explanation                                                                                               |
-|--------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| `xsct-cake init`                     | Only creates the files `xsct.tempk` `and xsct.state` in `~/.cache` (all other commands will also do this) |
-| `xsct-cake print`                    | Prints the current value in `~/.cache/xsct.tempk` if `~/.cache/xsct.state` is *ON* else it prints "OFF"   |
-| `xsct-cake tail`                     | Same as `xsct-cake print` but will continuously print on every value and state change                     |
-| `xsct-cake restore`  aaaaaaaaaaaaaaaaaa    | Sets `xsct` to the value stored in `~/.cache/xsct.tempk`                                                  |
-| `xsct-cake toggle`               a    | Turns the state ON/OFF (not the same as `xsct --toggle`)                                                  |
+| Command                    | Explanation                                                                                               |
+|----------------------------|-----------------------------------------------------------------------------------------------------------|
+| `xsct-cake init`           | Only creates the files `xsct.tempk` `and xsct.state` in `~/.cache` (all other commands will also do this) |
+| `xsct-cake print`          | Prints the current value in `~/.cache/xsct.tempk` if `~/.cache/xsct.state` is *ON* else it prints "OFF"   |
+| `xsct-cake tail`           | Same as `xsct-cake print` but will continuously print on every value and state change                     |
+| `xsct-cake restore`        | Sets `xsct` to the value stored in `~/.cache/xsct.tempk`                                                  |
+| `xsct-cake toggle`         | Turns the state ON/OFF (not the same as `xsct --toggle`)                                                  |
 
 All `xsct` can of course also be used. See https://github.com/faf0/sct/
 
