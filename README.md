@@ -13,7 +13,6 @@ Logo font: https://velvetyne.fr/fonts/resistance/
 
 ## High Quality Demo
 ![High Quality Demo](demo.gif)\
-(temperature changes didn't show up on OBS screen recording)
 
 ## Dependencies
 
