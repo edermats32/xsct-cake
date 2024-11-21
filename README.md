@@ -20,7 +20,11 @@ Logo font: https://velvetyne.fr/fonts/resistance/
 ## Installation
 
 Just `git clone` this repo and move the file `xsct-cake` to any location of your choice. \
-Preferably somewhere that is in your `$PATH`.
+Preferably somewhere that's in your `$PATH`. \
+You may also need to make it executable: 
+```sh
+chmod +x xsct-cake
+```
 
 ## Usage
 
