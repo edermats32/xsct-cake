@@ -28,7 +28,7 @@ Only one parameter can be used at a time (only the first parameter is read).
 | `xsct-cake print`     | Prints the current value in `~/.cache/xsct.tempk` if `~/.cache/xsct.state` is *ON* else it prints "OFF"   |
 | `xsct-cake tail`      | Same as `xsct-cake print` but will continuously print on every value and state change                     |
 | `xsct-cake restore` &#x2011;  | Sets `xsct` to the value stored in `~/.cache/xsct.tempk`                                                  |
-| `xsct-cake toggle` &#x2011;   | Turns the state ON/OFF (not the same as `xsct --toggle`)                                                  |
+| `xsct-cake toggle`            | Turns the state ON/OFF (not the same as `xsct --toggle`)                                                  |
 
 All `xsct` can of course also be used. See https://github.com/faf0/sct/
 
