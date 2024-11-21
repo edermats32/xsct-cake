@@ -11,6 +11,9 @@ Two files are created in `~/.cache/`
 ![logo](xsct-cake.png)
 Logo font: https://velvetyne.fr/fonts/resistance/
 
+## High Quality Demo (might takes some time to load)
+![High Quality Demo](demo.gif)
+
 ## Dependencies
 
 - Any POSIX compliant shell, such as `dash` 
