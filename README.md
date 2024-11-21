@@ -59,7 +59,7 @@ scroll-up = xsct-cake -d 300 1    # Increase by 300K
 scroll-down = xsct-cake -d -300 1 # Decrease by 300K
 
 label = "XSCT %output%"
-# If you have a nerdfont, below is a good glyph:
+# If you have a nerdfont, below is a good glyph [f0594]:
 # label = "󰖔 %output%"
 
 ```
