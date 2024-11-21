@@ -15,7 +15,7 @@ Logo font: https://velvetyne.fr/fonts/resistance/
 
 - Any POSIX compliant shell, such as `dash` 
 - xsct - https://github.com/faf0/sct/
-- inotifywait (for `xsct-cake tail`) - https://github.com/inotify-tools/inotify-tools (privided by package `inotify-tools` on most distros)
+- inotifywait (for `xsct-cake tail`) - https://github.com/inotify-tools/inotify-tools (privided by `inotify-tools` package on most distros)
 
 ## Installation
 
