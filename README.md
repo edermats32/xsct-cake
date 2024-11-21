@@ -2,7 +2,11 @@
 
 Interface for `xsct` written in POSIX compliant shell-script. \
 Intended to be used as a simple and minimal alternative to other blue light filters / night modes. \
-Designed with polybar integration in mind.
+Designed with polybar integration in mind. \
+\
+Two files are created in `~/.cache/`
+- `xsct.tempk` - Stores the current `xsct` Kelvin value
+- `xsct.state` - Stores the ON/OFF state
 
 ![logo](xsct-cake.png)
 Logo font: https://velvetyne.fr/fonts/resistance/
