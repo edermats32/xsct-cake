@@ -25,7 +25,7 @@ Only one parameter can be used at a time (only the first parameter is read).
 <table>
   <thead>
     <tr>
-      <th style="width: 70%;">Command</th>
+      <th style="width: 10000px;">Command</th>
       <th>Explanation</th>
     </tr>
   </thead>
