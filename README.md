@@ -1,4 +1,4 @@
-# xsct-cake
+2# xsct-cake
 
 Interface for `xsct` written in POSIX compliant shell-script. \
 Intended to be used as a simple and minimal alternative to other blue light filters / night modes. \
@@ -12,7 +12,7 @@ Two files are created in `~/.cache/`
 Logo font: https://velvetyne.fr/fonts/resistance/
 
 ## High Quality Demo
-![High Quality Demo](demo.gif)\
+![High Quality Demo](demo.gif)
 
 ## Dependencies
 
