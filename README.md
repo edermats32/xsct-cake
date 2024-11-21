@@ -1,11 +1,14 @@
 # xsct-cake
 
+Interface for `xsct` written in POSIX compliant shell-script. \
 Intended to be used as a simple and minimal alternative to other blue light filters / night modes. \
 Designed with polybar integration in mind.
 
+![logo](xsct-cake.png)
+
 ## Dependencies
 
-- Any posix compliant shell, such as `dash` 
+- Any POSIX compliant shell, such as `dash` 
 - xsct - https://github.com/faf0/sct/
 - inotifywait (for `xsct-cake tail`) - https://github.com/inotify-tools/inotify-tools (privided by package `inotify-tools` on most distros)
 
