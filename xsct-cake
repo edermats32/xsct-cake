@@ -1,0 +1,75 @@
+#!/bin/sh
+
+# Xsct Cache Kelvin
+# Simple script that saves the kelvin value and ON/OFF state of xsct
+# It also has some special arguments to make it useful
+
+_testcommand()
+{ # Tests if command exist and print helpful info if not
+  command -v $1 >/dev/null 2>&1 || {
+   echo "Command '$1' not found.\n"
+   echo "Source:       $2"
+   echo "Arch Package: $3"
+   echo "Arch Repo:    $4"
+   exit 1
+  }
+}
+
+# Make sure xsct command exists
+_testcommand 'xsct' 'https://github.com/faf0/sct/' 'xsct' 'AUR'
+
+# Savefiles
+tempk_file="$HOME/.cache/xsct.tempk"
+state_file="$HOME/.cache/xsct.state"
+
+# Check if exists and create if not
+[ -e $tempk_file ] || echo $(xsct | awk '{print $5}';) > $tempk_file
+[ -e $state_file ] || echo "ON" > $state_file
+
+# If just want to create the cache files, we can stop here
+[ "$1" = "init" ] && exit 0
+
+# Current values
+tempk=$(cat $tempk_file)
+state=$(cat $state_file)
+
+_print()
+{ # Print message
+  [ $state = "ON" ]  &&
+    echo "${tempk}K" || # If on print kevlin value
+    echo $state         # else print $state (OFF)
+}
+
+_tail()
+{ # Print when either file is written to
+  # Make sure inotifywait command exists
+  _testcommand 'inotifywait' 'https://github.com/inotify-tools/inotify-tools' 'inotify-tools' 'Extra'
+  while :; do
+    _print
+    inotifywait -q -e modify "$tempk_file" "$state_file" > /dev/null 2>&1
+    tempk=$(cat $tempk_file)
+    state=$(cat $state_file)
+  done
+}
+
+# Check first arg, the xsct-cake specific arg
+case $1 in
+  "print") _print && exit 0 || exit 1 ;;
+  "tail") _tail && exit 0 || exit 1 ;;
+  "restore") xsct $tempk && state="ON" ;; # Sets currently saved value
+  "toggle")
+  # Toggles ON/OFF
+    case $state in
+      "ON")  xsct 0      && state="OFF" ;; # Turn off xsct
+      "OFF") xsct $tempk && state="ON"  ;; # Turn on with saved kelvin value
+    esac
+  ;;
+  # If no xsct-cake arg is specified, pass args to xsct
+  *) xsct $@ && tempk=$(xsct | awk '{print $5}';) && state="ON" ;;
+esac
+
+# Write to savefiles
+echo $tempk > $tempk_file
+echo $state > $state_file
+
+_print
