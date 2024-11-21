@@ -5,6 +5,7 @@ Intended to be used as a simple and minimal alternative to other blue light filt
 Designed with polybar integration in mind.
 
 ![logo](xsct-cake.png)
+Logo font: https://velvetyne.fr/fonts/resistance/
 
 ## Dependencies
 
