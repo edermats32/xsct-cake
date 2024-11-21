@@ -86,3 +86,15 @@ super + XF86AudioLowerVolume
 super + XF86AudioMute
         ~/.local/bin/xsct-cake toggle      # Turn ON/OFF
 ```
+
+## Comparison to other Blue Light Filters (table base copied from blugon repo)
+
+|                          | xsct-cake                 | [blugon](https://github.com/jumper149/blugon/) | [Redshift](https://github.com/jonls/redshift) | [f.lux](https://justgetflux.com/) |
+|-------------------------:|:--------------------------|:--------------------------|:----------------------------------------------|:----------------------------------|
+| written in               | POSIX SHELL               | Python                    | C                                             | closed source                     |
+| interface                | CLI                       | CLI                       | CLI or GUI                                    | GUI                               |
+| timing configuration     | nope                      | user defined              | day and night                                 | day and night                     |
+| gamma configuration      | yep, temperature          | RGB values or temperature | temperature                                   | temperature                       |
+| brightness configuration | nope, maybe in future     | none                      | none                                          | none                              |
+| has to do with cake 🍰😋 | nope                      | nope                      | nope                                          | probably not                      |
+
