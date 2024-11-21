@@ -30,7 +30,7 @@ All `xsct` can of course also be used. See https://github.com/faf0/sct/
 *Assuming `xsct-cake` is in users `$PATH`*
 
 ### Polybar
-`
+`~/.config/polybar/config.ini`
 ```sh
 [module/xsct]
 type = custom/script
@@ -42,7 +42,7 @@ click-left = xsct-cake toggle     # Turn ON/OFF
 scroll-up = xsct-cake -d 300 1    # Increase by 300K
 scroll-down = xsct-cake -d -300 1 # Decrease by 300K
 
-label = "XSCT: %output%"
+label = "XSCT %output%"
 # If you have a nerdfont below is a good glyph:
 # label = "󰖔 %output%"
 
