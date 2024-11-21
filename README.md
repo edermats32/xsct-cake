@@ -1,5 +1,8 @@
 # xsct-cake
 
+Intended to be used as a simple and minimal alternative to other blue light filters / night modes. \
+Designed with polybar integration in mind.
+
 ## Dependencies
 
 - Any posix compliant shell, such as `dash` 
