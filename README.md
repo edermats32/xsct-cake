@@ -24,7 +24,7 @@ The `xsct-cake` parameters do not start with a `-` in order to distinguish them 
 Only one parameter can be used at a time (only the first parameter is read).
 
 | Command                       | Explanation                                                                                               |
-| ------------------------------|-----------------------------------------------------------------------------------------------------------|
+| :-----------------------------|:-----------------------------------------------------------------------------------------------------------|
 | `xsct-cake init`              | Only creates the files `xsct.tempk` `and xsct.state` in `~/.cache` (all other commands will also do this) |
 | `xsct-cake print`             | Prints the current value in `~/.cache/xsct.tempk` if `~/.cache/xsct.state` is *ON* else it prints "OFF"   |
 | `xsct-cake tail`              | Same as `xsct-cake print` but will continuously print on every value and state change                     |
