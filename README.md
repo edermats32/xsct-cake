@@ -20,10 +20,14 @@ Logo font: https://velvetyne.fr/fonts/resistance/
 ## Installation
 
 Just `git clone` this repo and move the file `xsct-cake` to any location of your choice. \
-Preferably somewhere that's in your `$PATH`. \
+For example:
+```
+git clone https://github.com/edermats32/xsct-cake.git && \
+cp ./xsct-cake/xsct-cake ~/.local/bin/xsct-cake
+```
 You may also need to make it executable: 
 ```sh
-chmod +x xsct-cake
+chmod +x ~/.local/bin/xsct-cake
 ```
 
 ## Usage
@@ -43,20 +47,20 @@ Only one parameter can be used at a time (only the first parameter is read).
 All `xsct` can of course also be used. See https://github.com/faf0/sct/
 
 ## Example
-*Assuming `xsct-cake` is in users `$PATH`*
+*Assuming `xsct-cake` is in `~/.local/bin/xsct-cake`*
 
 ### Polybar
 `~/.config/polybar/config.ini`
 ```sh
 [module/xsct]
 type = custom/script
-exec = xsct-cake tail             # Look for value and state changes
+exec = ~/.local/bin/xsct-cake tail # Look for value and state changes
 
-tail = true                       # Don't worry, this will not blow up your CPU (hopefully)
+tail = true # Don't worry, this will not blow up your CPU (hopefully)
 
-click-left = xsct-cake toggle     # Turn ON/OFF
-scroll-up = xsct-cake -d 300 1    # Increase by 300K
-scroll-down = xsct-cake -d -300 1 # Decrease by 300K
+click-left = ~/.local/bin/xsct-cake toggle      # Turn ON/OFF
+scroll-up = ~/.local/bin/xsct-cake -d 300 1     # Increase by 300K
+scroll-down = ~/.local/bin/xsct-cake -d -300 1  # Decrease by 300K
 
 label = "XSCT %output%"
 # If you have a nerdfont, below is a good glyph [f0594]:
@@ -67,18 +71,18 @@ label = "XSCT %output%"
 ### bspwm
 `~/.config/bspwm/bspwmrc`
 ```sh
-xsct-cake restore & # Restores the previous temperature
+~/.local/bin/xsct-cake restore & # Restores the previous temperature
 ```
 
 ### sxhkd
 `~/.config/sxhkd/sxhkdrc`
 ```sh
 super + XF86AudioRaiseVolume
-        xsct-cake -d 300 1    # Increase by 300K
+        ~/.local/bin/xsct-cake -d 300 1    # Increase by 300K
 
 super + XF86AudioLowerVolume
-        xsct-cake -d -300 1   # Decrease by 300K
+        ~/.local/bin/xsct-cake -d -300 1   # Decrease by 300K
 
 super + XF86AudioMute
-        xsct-cake toggle      # Turn ON/OFF
+        ~/.local/bin/xsct-cake toggle      # Turn ON/OFF
 ```
