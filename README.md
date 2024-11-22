@@ -1,4 +1,4 @@
-2# xsct-cake
+# xsct-cake
 
 Interface for `xsct` written in POSIX compliant shell-script. \
 Intended to be used as a simple and minimal alternative to other blue light filters / night modes. \
