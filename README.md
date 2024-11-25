@@ -28,7 +28,7 @@ For example:
 git clone https://github.com/edermats32/xsct-cake.git && \
 cp ./xsct-cake/xsct-cake ~/.local/bin/xsct-cake
 ```
-You may also need to make it executable: 
+You also need to make it executable: 
 ```sh
 chmod +x ~/.local/bin/xsct-cake
 ```
