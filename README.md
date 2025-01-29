@@ -47,9 +47,9 @@ Only one parameter can be used at a time (only the first parameter is read).
 | `xsct-cake toggle`            | Turns the state ON/OFF (not the same as `xsct --toggle`)                                                  |
 | ____________________          |                                                                                                           |
 
-All `xsct` can of course also be used. See https://github.com/faf0/sct/
+All `xsct` parameters can of course also be used. See https://github.com/faf0/sct/
 
-## Example
+## Config Examples
 *Assuming `xsct-cake` is in `~/.local/bin/xsct-cake`*
 
 ### Polybar
@@ -76,6 +76,20 @@ label = "XSCT %output%"
 ```sh
 ~/.local/bin/xsct-cake restore & # Restores the previous temperature
 ```
+
+## Keybinds Examples
+
+### xremap
+`config.yml`
+```yaml
+keymap:
+  - name: xsct-cake control
+    remap:
+      SUPER-KEY_VOLUMEUP: { launch: ["sh", "-c", "$HOME/.local/bin/xsct-cake -d 300 1"] }
+      SUPER-KEY_VOLUMEDOWN: { launch: ["sh", "-c", "$HOME/.local/bin/xsct-cake -d -300 1"] }
+      SUPER-KEY_MUTE: { launch: ["sh", "-c", "$HOME/.local/bin/xsct-cake toggle"] }
+```
+Also make sure your user is in the `input` group and that you have followed the steps [Running xremap without sudo](https://github.com/xremap/xremap?tab=readme-ov-file#running-xremap-without-sudo) from [https://github.com/xremap/xremap](https://github.com/xremap/xremap)
 
 ### sxhkd
 `~/.config/sxhkd/sxhkdrc`
